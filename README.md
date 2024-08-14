@@ -29,6 +29,17 @@ If you wish to run an example simulation for a specific parameterization, run th
 
 It is useful to generate a large set of simulations to compare directly. The file 4_Multi_Simulation.ipynb is a walk-through showing how to run multiple simulations for different initial conditions and animate the solutions for easy comparison. It includes two types of animation schemes, a simple scheme with visuals of progressing plots and a complex scheme that includes key metrics printed underneath the progressing plots. The key metrics include the number of simulations, functional calls regarding the numerical integration scheme, final state values at the end of the time span, and the variable parameterization that the simulations were run with. For reasons unbeknownst to me, the complex animation scheme is finicky and often does not render correctly on its first run; Therefore, if using the complex animation scheme, run each code block individually before the animation block, then run the animation block and if it renders incorrectly (spacing of text overlaps with figures), close the animation pop-up and run the animation code block again. The spacing should be fixed after the second run. The file also includes a code block for saving your animation as an mp4 to a given directory on your computer; be sure you are content with the animation visual before saving as an mp4. The mp4 format allows for much more control when referencing the simulations within the animation later on (pausing, moving forward, moving backward in initial condition space; things the `matplotlib.animation` does not allow for).
 
+## Particular Investigations
+
+The remaining files within the repository were created for investigating specific questions or generating pertinent figures. Below are short descriptions of each remaining file and their intended use.
+
+TotalN_vs_VHRatio_&_BurstSize.ipynb - A file which estimates and visualizes free virus to host ratio and burst size for steady state solutions over changing total N.
+
+Dynamic_Initial_State_Animation.ipynb - A file which runs multiple simulations with various combinations of initital state conditions for a specified total N level. Animation cappabilities are included for ease of comparison. Inteanded to help diagnose model sensitivity to initial condition.
+
+gVOD_data_parsing.ipynb - File importing and analysing data from the Global Viral Oceanography Database (gVOD). Key parameters of interests are virus decay rates, virus-to-prokaryote ratio, burst size, and lysis rate. These data can help inform our models parameterization.
+
+Comparative_Bifurcation_Plots.ipynb - A file which runs simulations for both NPZ and NPZV configurations, pulls values representing the late time behavior of each solution, and plots them on comparitive graphs. 
 
 
 
